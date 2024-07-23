@@ -18,4 +18,4 @@ vim.opt.writebackup = true
 vim.g.CheatSheetDisableFrameworkDetection = 0
 vim.g.ruby_host_prog = "$HOME/.local/share/mise/shims/ruby"
 vim.g.python_host_prog = "$HOME/.local/share/mise/shims/python3"
-vim.g.node_host_prog = "$HOME/.local/share/mise/shims/node"
+vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/lts/bin/node"
