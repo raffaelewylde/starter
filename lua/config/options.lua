@@ -26,12 +26,12 @@ vim.opt.writebackup = true
 vim.g.CheatSheetDisableFrameworkDetection = 0
 if vim.g.os == "Linux" or vim.g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
-  vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/ruby"
-  vim.g.python_host_prog = "$HOME/.local/share/mise/installs/python/latest/bin/python3"
+  vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/3.3.3/bin/neovim-ruby-host"
+  vim.g.python3_host_prog = "$HOME/.local/share/mise/installs/python/latest/bin/python3"
   --vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/20.15.1/bin/node"
-  vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/lts/bin/node"
+  vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/lts/bin/neovim-node-host"
 elseif vim.g.os == "Windows" then
-  vim.g.python_host_prog = "C:\\Users\\Shadow\\.pyenv\\pyenv-win\\shims\\python3.bat"
-  vim.g.node_host_prog = "C:\\Users\\Shadow\\scoop\\persist\\nvm\\nodejs\\v20.15.0\\node.exe"
-  vim.g.ruby_host_prog = "C:\\tools\\ruby33\\bin\\ruby.exe"
+  vim.g.python3_host_prog = "C:\\Users\\Shadow\\.pyenv\\pyenv-win\\versions\\3.10.5\\python3.exe"
+  vim.g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\pnpm\\neovim-node-host"
+  vim.g.ruby_host_prog = "C:\\tools\\ruby33\\bin\\neovim-ruby-host"
 end
