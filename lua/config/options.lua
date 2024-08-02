@@ -34,4 +34,5 @@ elseif vim.g.os == "Windows" then
   vim.g.python3_host_prog = "C:\\Users\\Shadow\\.pyenv\\pyenv-win\\versions\\3.10.5\\python3.exe"
   vim.g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\pnpm\\neovim-node-host"
   vim.g.ruby_host_prog = "C:\\tools\\ruby33\\bin\\neovim-ruby-host"
+  LazyVim.terminal.setup("pwsh")
 end
