@@ -5,3 +5,8 @@ unicode
 ascii
 codepoints
 sed
+Zstyle
+zsh
+fpath
+compdef
+Zstyle
