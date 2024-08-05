@@ -10,3 +10,4 @@ zsh
 fpath
 compdef
 Zstyle
+OSX
