@@ -31,8 +31,9 @@ if vim.g.os == "Linux" or vim.g.os == "Darwin" then
   --vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/20.15.1/bin/node"
   vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/lts/bin/neovim-node-host"
 elseif vim.g.os == "Windows" then
-  vim.g.python3_host_prog = "C:\\Users\\Shadow\\.pyenv\\pyenv-win\\versions\\3.10.5\\python3.exe"
-  vim.g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\pnpm\\neovim-node-host"
-  vim.g.ruby_host_prog = "C:\\tools\\ruby33\\bin\\neovim-ruby-host"
   LazyVim.terminal.setup("pwsh.exe")
+  vim.g.python3_host_prog = "%USERPROFILE%\\.pyenv\\pyenv-win\\versions\\3.12.4\\python3.exe"
+  vim.g.ruby_host_prog = "%USERPROFILE%\\scoop\\persist\\ruby\\gems\\bin\\neovim-ruby-host"
+  vim.g.node_host_prog =
+    "%USERPROFILE%\\AppData\\Roaming\\fnm\node-versions\\v20.15.1\\installation\\neovim-node-host.cmd"
 end
