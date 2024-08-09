@@ -23,6 +23,7 @@ vim.opt.undofile = true
 vim.opt.autowriteall = true
 vim.opt.swapfile = false
 vim.opt.writebackup = true
+vim.opt.fileformats = "unix,dos"
 vim.g.CheatSheetDisableFrameworkDetection = 0
 if vim.g.os == "Linux" or vim.g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
