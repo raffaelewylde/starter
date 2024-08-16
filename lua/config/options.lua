@@ -1,29 +1,31 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
-if vim.fn.exists("g:os") == 0 then
-  local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 or vim.fn.has("win16") == 1
+local o = vim.o
+local fn = vim.fn
+if fn.exists("g:os") == 0 then
+  local is_windows = fn.has("win64") == 1 or fn.has("win32") == 1 or fn.has("win16") == 1
   if is_windows then
     vim.g.os = "Windows"
   else
-    local uname_output = vim.fn.system("uname")
+    local uname_output = fn.system("uname")
     vim.g.os = string.gsub(uname_output, "\n", "")
   end
 end
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.breakindent = true
-vim.opt.breakat = " ^I!@*-+;:,./?"
-vim.opt.showbreak = "++"
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.undofile = true
-vim.opt.autowriteall = true
-vim.opt.swapfile = false
-vim.opt.writebackup = true
-vim.opt.fileformats = "unix,dos"
+o.wrap = true
+o.linebreak = true
+o.breakindent = true
+o.breakat = " ^I!@*-+;:,./?"
+o.showbreak = "++"
+o.tabstop = 8
+o.softtabstop = 4
+o.shiftwidth = 4
+o.expandtab = true
+o.undofile = true
+o.autowriteall = true
+o.swapfile = false
+o.writebackup = true
+o.fileformats = "unix,dos"
 vim.g.CheatSheetDisableFrameworkDetection = 0
 if vim.g.os == "Linux" or vim.g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
