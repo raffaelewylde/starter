@@ -39,7 +39,9 @@ elseif vim.g.os == "Windows" then
     "%USERPROFILE%\\AppData\\Roaming\\fnm\\node-versions\\v20.15.1\\installation\\neovim-node-host.cmd"
 end
 if vim.g.neovide then
-  vim.o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
+  if vim.g.os == "Linux" then
+    vim.o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
+  end
   vim.g.neovide_text_gamma = 0.8
   vim.g.neovide_text_contrast = 0.1
   if vim.g.os == "Darwin" then
@@ -54,6 +56,8 @@ if vim.g.neovide then
     vim.g.neovide_window_blurred = true
     vim.g.neovide_show_border = true
     vim.g.neovide_input_macos_option_key_is_meta = "only_left"
+
+    vim.o.guifont = "MesloLGS_NF,Hack_Nerd_Font,JetBrainsMono_Nerd_Font:h14"
   end
   vim.g.neovide_transparency = 0.8
   vim.g.neovide_position_animation_length = 0.15
