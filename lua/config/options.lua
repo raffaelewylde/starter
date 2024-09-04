@@ -16,6 +16,7 @@ end
 o.wrap = true
 o.linebreak = true
 o.breakindent = true
+o.fsync = false
 o.breakat = " ^I!@*-+;:,./?"
 o.showbreak = "++"
 o.tabstop = 8
@@ -38,6 +39,20 @@ elseif vim.g.os == "Windows" then
   g.python3_host_prog = "%USERPROFILE%\\.pyenv\\pyenv-win\\versions\\3.12.4\\python3.exe"
   g.ruby_host_prog = "%USERPROFILE%\\scoop\\persist\\ruby\\gems\\bin\\neovim-ruby-host"
   g.node_host_prog = "%USERPROFILE%\\AppData\\Roaming\\fnm\\node-versions\\v20.15.1\\installation\\neovim-node-host.cmd"
+  vim.cmd([[
+    let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \       '+': 'clip.exe',
+            \       '*': 'clip.exe',
+            \   },
+            \   'paste': {
+            \       '+': 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \       '*': 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+  ]])
 end
 if g.neovide then
   if g.os == "Linux" then
