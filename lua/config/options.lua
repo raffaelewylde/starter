@@ -16,6 +16,7 @@ end
 o.wrap = true
 o.linebreak = true
 o.breakindent = true
+o.fsync = false
 o.breakat = " ^I!@*-+;:,./?"
 o.showbreak = "++"
 o.tabstop = 8
