@@ -13,6 +13,7 @@ if fn.exists("g:os") == 0 then
     g.os = string.gsub(uname_output, "\n", "")
   end
 end
+vim.loader.enable()
 o.wrap = true
 o.linebreak = true
 o.breakindent = true
