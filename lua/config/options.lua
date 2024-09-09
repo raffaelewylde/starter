@@ -31,9 +31,9 @@ o.fileformats = "unix,dos"
 g.CheatSheetDisableFrameworkDetection = 0
 if g.os == "Linux" or g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
-  vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/3.3.3/bin/neovim-ruby-host"
-  vim.g.python3_host_prog = "${HOME}/venvs/neovim/bin/python3"
-  vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/lts/bin/neovim-node-host"
+  vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
+  vim.g.python3_host_prog = "${HOME}/.venvs/neovim/bin/python3"
+  vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/latest/bin/neovim-node-host"
 elseif vim.g.os == "Windows" then
   LazyVim.terminal.setup("pwsh.exe")
   g.python3_host_prog = "%USERPROFILE%\\.pyenv\\pyenv-win\\versions\\3.12.4\\python3.exe"
