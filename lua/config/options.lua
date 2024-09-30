@@ -68,8 +68,8 @@ if g.neovide then
     end
     -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
     g.neovide_transparency = 0.0
-    g.transparency = 0.8
-    g.neovide_background_color = "#ee55ee" .. alpha()
+    g.transparency = 0.6
+    g.neovide_background_color = "#311b92" .. alpha()
     g.neovide_window_blurred = true
     g.neovide_show_border = true
     g.neovide_input_macos_option_key_is_meta = "only_left"
