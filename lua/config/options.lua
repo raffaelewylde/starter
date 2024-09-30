@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local o = vim.o
+local va = vim.api
 local fn = vim.fn
 local g = vim.g
 if fn.exists("g:os") == 0 then
@@ -30,6 +31,22 @@ o.swapfile = false
 o.writebackup = true
 o.fileformats = "unix,dos"
 g.CheatSheetDisableFrameworkDetection = 0
+
+-- make help pages appear in a full-screen tab
+-- ============================================
+-- only apply to .txt files
+va.nvim_create_augroup("HelpInTabs", { clear = true })
+va.nvim_create_autocmd("BufEnter", {
+  group = "HelpInTabs",
+  pattern = "*.txt",
+  callback = function()
+    if vim.bo.buftype == "help" then
+      -- Convert the help window to a tab
+      vim.cmd("normal! <C-W>T")
+    end
+  end,
+})
+-- os specific config options
 if g.os == "Linux" or g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
   vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
@@ -55,6 +72,8 @@ elseif vim.g.os == "Windows" then
             \ }
   ]])
 end
+
+-- Config specific for neovide
 if g.neovide then
   if g.os == "Linux" then
     o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
