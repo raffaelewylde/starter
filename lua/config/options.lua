@@ -114,3 +114,11 @@ if g.neovide then
   g.neovide_cursor_vfx_particle_phase = 8.5
   g.neovide_cursor_vfx_particle_curl = 0.4
 end
+
+--Config specific for VV on macos
+vim.cmd([[
+  if exists('g:vv')
+    VVset fontfamily=MesloLGS\ NF,\ MesloLGS_NF,\ Terminess_Nerd_Font
+    VVset fontsize=13
+  endif
+  ]])
