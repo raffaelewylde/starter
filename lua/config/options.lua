@@ -78,12 +78,12 @@ if g.neovide then
   if g.os == "Linux" then
     o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
   end
-  g.neovide_text_gamma = 0.8
-  g.neovide_text_contrast = 0.1
+  --g.neovide_text_gamma = 0.8
+  --g.neovide_text_contrast = 0.1
   if g.os == "Darwin" then
     -- Helper function for transparency formatting
     local alpha = function()
-      return string.format("%x", math.floor(255 * g.transparency or 0.8))
+      return string.format("%x", math.floor(255 * g.transparency or 0.9))
     end
     -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
     g.neovide_transparency = 0.0
@@ -95,7 +95,7 @@ if g.neovide then
     o.guifont = "MesloLGS_NF,Hack_Nerd_Font,JetBrainsMono_Nerd_Font:h14"
   end
   if g.os == "Linux" then
-    g.neovide_transparency = 0.8
+    g.neovide_transparency = 0.9
   end
   g.neovide_position_animation_length = 0.15
   g.neovide_scroll_animation_length = 0.3
