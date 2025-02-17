@@ -77,6 +77,7 @@ end
 if g.neovide then
   if g.os == "Linux" then
     o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
+    g.neovide_transparency = 0.9
   end
   --g.neovide_text_gamma = 0.8
   --g.neovide_text_contrast = 0.1
@@ -93,9 +94,6 @@ if g.neovide then
     g.neovide_show_border = true
     g.neovide_input_macos_option_key_is_meta = "only_left"
     o.guifont = "MesloLGS_NF,Hack_Nerd_Font,JetBrainsMono_Nerd_Font:h14"
-  end
-  if g.os == "Linux" then
-    g.neovide_transparency = 0.9
   end
   g.neovide_position_animation_length = 0.15
   g.neovide_scroll_animation_length = 0.3
@@ -114,7 +112,6 @@ if g.neovide then
   g.neovide_cursor_vfx_particle_phase = 8.5
   g.neovide_cursor_vfx_particle_curl = 0.4
 end
-
 --Config specific for VV on macos
 vim.cmd([[
   if exists('g:vv')
