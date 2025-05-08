@@ -1,8 +1,7 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
-local o = vim.o
-local va = vim.api
+local o = vim.opt
 local fn = vim.fn
 local g = vim.g
 if fn.exists("g:os") == 0 then
@@ -31,6 +30,8 @@ o.swapfile = false
 o.writebackup = true
 o.fileformats = "unix,dos"
 g.CheatSheetDisableFrameworkDetection = 0
+o.fileformats = { "unix" }
+
 
 -- make help pages appear in a full-screen tab
 -- ============================================
