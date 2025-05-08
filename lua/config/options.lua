@@ -77,7 +77,7 @@ end
 if g.neovide then
   if g.os == "Linux" then
     o.guifont = "MesloLGS_Nerd_Font,Hack_Nerd_Font,Noto_Color_Emoji:h14"
-    g.neovide_transparency = 0.9
+    g.neovide_opacity = 0.9
   end
   --g.neovide_text_gamma = 0.8
   --g.neovide_text_contrast = 0.1
@@ -87,7 +87,7 @@ if g.neovide then
       return string.format("%x", math.floor(255 * g.transparency or 0.9))
     end
     -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-    g.neovide_transparency = 0.0
+    g.neovide_opacity = 0.0
     g.transparency = 0.6
     g.neovide_background_color = "#311b92" .. alpha()
     g.neovide_window_blurred = true
