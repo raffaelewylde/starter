@@ -31,6 +31,8 @@ o.swapfile = false
 o.writebackup = true
 o.fileformats = "unix,dos"
 g.CheatSheetDisableFrameworkDetection = 0
+o.fileformats = { "unix" }
+
 
 -- make help pages appear in a full-screen tab
 -- ============================================
