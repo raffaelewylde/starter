@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local o = vim.opt
+local va = vim.api
 local fn = vim.fn
 local g = vim.g
 if fn.exists("g:os") == 0 then
