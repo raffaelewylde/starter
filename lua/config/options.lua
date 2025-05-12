@@ -33,7 +33,6 @@ o.fileformats = "unix,dos"
 g.CheatSheetDisableFrameworkDetection = 0
 o.fileformats = { "unix" }
 
-
 -- make help pages appear in a full-screen tab
 -- ============================================
 -- only apply to .txt files
@@ -51,14 +50,16 @@ va.nvim_create_autocmd("BufEnter", {
 -- os specific config options
 if g.os == "Linux" or g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
-  vim.g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
-  vim.g.python3_host_prog = "${HOME}/.venvs/neovim/bin/python3"
-  vim.g.node_host_prog = "$HOME/.local/share/mise/installs/node/latest/bin/neovim-node-host"
-elseif vim.g.os == "Windows" then
+  g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
+  g.python3_host_prog = "${HOME}/.venvs/neovim/bin/python3"
+  g.node_host_prog = "$HOME/.local/share/mise/installs/node/latest/bin/neovim-node-host"
+  g.perl_host_prog = "$HOME/,local/share/mise/installs/perl/latest/bin/perl"
+elseif g.os == "Windows" then
   LazyVim.terminal.setup("pwsh.exe")
   g.python3_host_prog = "%USERPROFILE%\\.pyenv\\pyenv-win\\versions\\3.12.4\\python3.exe"
   g.ruby_host_prog = "%USERPROFILE%\\scoop\\persist\\ruby\\gems\\bin\\neovim-ruby-host"
   g.node_host_prog = "%USERPROFILE%\\AppData\\Roaming\\fnm\\node-versions\\v20.15.1\\installation\\neovim-node-host.cmd"
+  g.perl_host_prog = "C:\\strawberryperl\\pperl\\perl\\bin\\perl"
   vim.cmd([[
     let g:clipboard = {
             \   'name': 'WslClipboard',
