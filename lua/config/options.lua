@@ -48,11 +48,11 @@ va.nvim_create_autocmd("BufEnter", {
 })
 -- os specific config options
 if g.os == "Linux" or g.os == "Darwin" then
-  vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
-  g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
-  g.python3_host_prog = "$HOME/.venvs/neovim/bin/python3"
-  g.node_host_prog = "$HOME/.local/share/mise/installs/npm-neovim/5.3.0/bin/neovim-node-host"
-  g.perl_host_prog = "$HOME/.local/share/mise/installs/perl/latest/bin/perl"
+  vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims" .. ":" .. vim.env.PATH
+  g.ruby_host_prog = vim.env.HOME .. "/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
+  g.python3_host_prog = vim.env.HOME .. "/.venvs/neovim/bin/python3"
+  g.node_host_prog = vim.env.HOME .. "/.local/share/mise/installs/npm-neovim/5.3.0/bin/neovim-node-host"
+  g.perl_host_prog = vim.env.HOME .. "/.local/share/mise/installs/perl/5.40.2.0/perl-darwin-amd64/bin/perl"
 elseif g.os == "Windows" then
   LazyVim.terminal.setup("pwsh.exe")
   g.python3_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\python\\3.12.9\\python.exe"
