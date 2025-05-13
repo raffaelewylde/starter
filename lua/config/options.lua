@@ -50,7 +50,7 @@ va.nvim_create_autocmd("BufEnter", {
 if g.os == "Linux" or g.os == "Darwin" then
   vim.env.PATH = vim.env.HOME .. "$HOME/.local/share/mise/shims:" .. vim.env.PATH
   g.ruby_host_prog = "$HOME/.local/share/mise/installs/ruby/latest/bin/neovim-ruby-host"
-  g.python3_host_prog = "${HOME}/.venvs/neovim/bin/python3"
+  g.python3_host_prog = "$HOME/.venvs/neovim/bin/python3"
   g.node_host_prog = "$HOME/.local/share/mise/installs/npm-neovim/5.3.0/bin/neovim-node-host"
   g.perl_host_prog = "$HOME/.local/share/mise/installs/perl/latest/bin/perl"
 elseif g.os == "Windows" then
