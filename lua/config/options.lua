@@ -54,10 +54,10 @@ if g.os == "Linux" or g.os == "Darwin" then
   g.node_host_prog = vim.env.HOME .. "/.local/share/mise/installs/npm-neovim/5.3.0/bin/neovim-node-host"
   g.perl_host_prog = vim.env.HOME .. "/.local/share/mise/installs/perl/5.40.2.0/perl-darwin-amd64/bin/perl"
 elseif g.os == "Windows" then
-  LazyVim.terminal.setup("pwsh.exe")
+  LazyVim.terminal.setup("pwsh")
   g.python3_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\python\\3.12.9\\python.exe"
   g.ruby_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\ruby\\3.4.3\\bin\\neovim-ruby-host.bat"
-  g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\node\\23.11.0\\neovim-node-host.cmd"
+  g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\node\\23.11.0\\node_modules\\neovim\\bin\\cli.js"
   g.perl_host_prog = "D:\\scoop\\apps\\perl\\current\\perl\\bin\\perl.exe"
   vim.cmd([[
     let g:clipboard = {
