@@ -28,7 +28,7 @@ if vim.env.KITTY_SCROLLBACK_NVIM == "true" then
   vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/lazy/kitty-scrollback.nvim") -- lazy.nvim
   vim.g.mapleader = " "
   vim.g.maplocalleader = ","
-  vim.cmd.colorscheme("cyberdream")
+  vim.cmd.colorscheme("elflord")
   kitty_scrollback_config()
   return {}
 else
