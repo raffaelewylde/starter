@@ -15,6 +15,7 @@ if fn.exists("g:os") == 0 then
   end
 end
 vim.loader.enable()
+vim.env.SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
 o.wrap = true
 o.linebreak = true
 o.breakindent = true
@@ -57,7 +58,8 @@ elseif g.os == "Windows" then
   LazyVim.terminal.setup("pwsh")
   g.python3_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\python\\3.12.9\\python.exe"
   g.ruby_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\ruby\\3.4.3\\bin\\neovim-ruby-host.bat"
-  g.node_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\node\\23.11.0\\node_modules\\neovim\\bin\\cli.js"
+  g.node_host_prog =
+    "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\node\\23.11.0\\node_modules\\neovim\\bin\\cli.js"
   g.perl_host_prog = "D:\\scoop\\apps\\perl\\current\\perl\\bin\\perl.exe"
   vim.cmd([[
     let g:clipboard = {
