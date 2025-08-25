@@ -56,6 +56,8 @@ if g.os == "Linux" or g.os == "Darwin" then
   g.perl_host_prog = vim.env.HOME .. "/.local/share/mise/installs/perl/5.40.2.0/perl-darwin-amd64/bin/perl"
 elseif g.os == "Windows" then
   LazyVim.terminal.setup("pwsh")
+  -- Add LLVM/Clang to PATH for Treesitter
+  vim.env.PATH = "C:\\Users\\Shadow\\scoop\\apps\\llvm\\current\\bin;" .. vim.env.PATH
   g.python3_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\python\\3.12.9\\python.exe"
   g.ruby_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\ruby\\3.4.3\\bin\\neovim-ruby-host.bat"
   g.node_host_prog =
