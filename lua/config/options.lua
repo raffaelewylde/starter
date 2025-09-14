@@ -59,10 +59,10 @@ elseif g.os == "Windows" then
   -- Add LLVM/Clang to PATH for Treesitter
   vim.env.PATH = "C:\\Users\\Shadow\\scoop\\apps\\llvm\\current\\bin;" .. vim.env.PATH
   g.python3_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\python\\3.12.9\\python.exe"
-  g.ruby_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\ruby\\3.4.3\\bin\\neovim-ruby-host.bat"
+  g.ruby_host_prog = "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\ruby\\3.4.5\\bin\\neovim-ruby-host.bat"
   g.node_host_prog =
     "C:\\Users\\Shadow\\AppData\\Local\\mise\\installs\\node\\23.11.0\\node_modules\\neovim\\bin\\cli.js"
-  g.perl_host_prog = "D:\\scoop\\apps\\perl\\current\\perl\\bin\\perl.exe"
+  g.perl_host_prog = "C:\\Users\\Shadow\\scoop\\apps\\perl\\current\\perl\\bin\\perl.exe"
   vim.cmd([[
     let g:clipboard = {
             \   'name': 'WslClipboard',
